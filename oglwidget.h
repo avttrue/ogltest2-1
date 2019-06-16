@@ -20,7 +20,7 @@ struct VertexData
     QVector3D normal;
 };
 
-class OGLWidget : public QOpenGLWidget, protected QOpenGLFunctions
+class OGLWidget : public QOpenGLWidget
 {
     Q_OBJECT
 
