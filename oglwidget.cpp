@@ -188,13 +188,13 @@ void OGLWidget::initCube(float width)
     m_ArrayBuffer.create();
     m_ArrayBuffer.bind();
     m_ArrayBuffer.allocate(vertexes.constData(),
-                           static_cast<int>(static_cast<unsigned long>(vertexes.size()) * sizeof(VertexData)));
+                           vertexes.size() * static_cast<int>(sizeof(VertexData)));
     m_ArrayBuffer.release();
 
     m_IndexBuffer.create();
     m_IndexBuffer.bind();
     m_IndexBuffer.allocate(indexes.constData(),
-                           static_cast<int>(static_cast<unsigned long>(indexes.size()) * sizeof(GLuint)));
+                           indexes.size() * static_cast<int>(sizeof(GLuint)));
     m_IndexBuffer.release();
 
     m_Texture = new QOpenGLTexture(QImage(":/cube3.png").mirrored());
